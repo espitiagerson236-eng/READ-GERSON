@@ -1,19 +1,20 @@
 import './App.css';
+import Tarjeta from './components/tarjeta';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App (){
-  const items = ['reac', 'Node', 'javaScript']
   return(
-    <section>
-      <div>hola mundo</div>
-      <ul>
-        {
-          items.map((item, index)=>(
-            <li key={index}>{item}</li>
-          ))
-        }
-      </ul>
-    </section>
-  )
+    <div>
+      <Header/>
+      <main>
+        <Tarjeta />
+        <Tarjeta />
+        <Tarjeta />
+      </main>
+      <Footer/> 
+    </div>
+  ); 
 };
 
 export default App;
