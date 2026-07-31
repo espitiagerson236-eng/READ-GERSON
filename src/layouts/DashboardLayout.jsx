@@ -1,6 +1,7 @@
 import './DashboardLayout.css';
 import Sidebar from '../components/Sidebar';
 import TopNav from '../components/TopNav';
+import { Outlet } from 'react-router-dom';
 
 function DashboardLayout(){
     return(
@@ -9,12 +10,7 @@ function DashboardLayout(){
             <div className='dashboard-derecha'>
                 <TopNav />
                 <main className='dashboard-contenido'>
-                    <h1>Resumen General</h1>
-                    <p>Bienvenido al Sistema</p>
-                    <div className='tarjeta-prueba'>
-                        <h3>Ventas del Dia</h3>
-                        <h2>$1,250 USD</h2>
-                    </div>
+                    <Outlet />
                 </main>
             </div>
         </div>
