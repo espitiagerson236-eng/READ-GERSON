@@ -1,0 +1,43 @@
+:global(body){
+    margin: 0;
+    background-color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard-contenedor{
+    display: flex;
+}
+
+.dashboard-derecha{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-contenido{
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.tarjeta-prueba{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    width: 250px;
+}
+
+.tarjeta-prueba h3{
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.tarjeta-prueba h2{
+    margin: 10px 0 0 0;
+    color: #0f172a;
+    font-size: 2rem;
+}

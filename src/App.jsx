@@ -4,12 +4,13 @@ import './App.css';
 // import Footer from './components/Footer';
 // import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
-import Servicios from './pages/Servicios';
+// import Servicios from './pages/Servicios';
+import DashboardLayout from './layouts/DashboardLayout';
 
 function App (){
   return(
     <>
-      <Servicios />
+      <DashboardLayout />
     </>
   ); 
 };
