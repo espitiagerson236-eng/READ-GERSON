@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar(){
@@ -8,12 +9,12 @@ function Sidebar(){
             <div className='sidebar-logo'>
                 <h2>{nombreAdmin}</h2>
             </div>
-            <ul className='sidebar-menu'>
-                <li className='activo'>Panel General</li>
-                <li>Usuario</li>
-                <li>Productos</li>
-                <li>Configuracion</li>
-            </ul>
+            <nav className='sidebar-menu'>
+                <NavLink to="/" className={({isActive}) => isActive ? "menu-item activo" : "menu-item"} end>Panel General</NavLink>
+                <NavLink to="/usuarios" className={({isActive}) => isActive ? "menu-item activo" : "menu-item"}>Usuarios</NavLink>
+                <NavLink to="/productos" className={({isActive}) => isActive ? "menu-item activo" : "menu-item"}>Productos</NavLink>
+                <NavLink to="/configuracion" className={({isActive}) => isActive ? "menu-item activo" : "menu-item"}>Configuracion</NavLink>
+            </nav>
             <div className='sidebar-footer'>
                 <button className='btn-logout'>Cerrar Sesion</button>
             </div>

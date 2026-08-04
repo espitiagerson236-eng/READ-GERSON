@@ -28,11 +28,13 @@
     flex-grow: 1;
 }
 
-.sidebar-menu li{
+.sidebar-menu .menu-item{
+    display: block;
     padding: 15px 25px;
     cursor: pointer;
     transition: background-color 0.2s;
     font-size: 1.1rem;
+    color: white;
 }
 
 .sidebar-menu li:hover, .sidebar-menu li.activo{

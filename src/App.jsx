@@ -10,13 +10,17 @@ import { Routes, Route } from 'react-router-dom';
 import PanelGeneral from './pages/PanelGeneral';
 import Productos from './pages/Productos';
 import NotFound from './pages/NotFound';
+import Usuarios from './pages/Usuarios';
+import UsuarioDetalle from './pages/UsuariosDetalle';
 
 function App (){
   return(
     <Routes>
       <Route path='/' element={<DashboardLayout/>}>
-        <Route path='/' element={<DashboardLayout/>}/>
-        <Route path='productos' element={<Productos/>}/>
+        <Route index element={<PanelGeneral />}/>
+        <Route path='productos' element={<Productos />}/>
+        <Route path='usuarios' element={<Usuarios />}/>
+        <Route path='usuarios/:id' element={<UsuarioDetalle />}/>
       </Route>
 
       <Route path='*' element={<NotFound/>}/>
