@@ -1,8 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContadorVentas(){
 
-    const [ventas, setVentas] = useState(0);
+    const [ventas, setVentas] = useState(()=>{
+        const datoGuardado = localStorage.getItem('ventas');
+        return datoGuardado ? parseInt(datoGuardado) : 0;
+    });
+
+    useEffect(()=>{
+        localStorage.setItem('ventas', ventas);
+
+        document.title = `ventas: ${ventas}`
+        
+        console.log(`Guardando automaticamente: Ventas = ${ventas}`);
+    
+    }, [ventas]);
 
     const registrarVenta = () => {
         setVentas(ventas + 1);

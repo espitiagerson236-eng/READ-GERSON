@@ -7,7 +7,7 @@ export default function UsuarioCard({ nombre, rol, estado, imagen }){
 
     const claseEstado = estado === 'Activo' ? 'badge-activo' : 'badge-inactivo';
 
-    const alternarSeguimiento = () => {
+    const alternarSeguimiento = () => { 
         setSiguiendo(!Siguiendo);
     }
 
