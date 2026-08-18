@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound';
 import Usuarios from './pages/Usuarios';
 import UsuarioDetalle from './pages/UsuariosDetalle';
 
+
 function App (){
   return(
     <Routes>

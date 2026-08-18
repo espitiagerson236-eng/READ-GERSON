@@ -2,9 +2,12 @@ import BuscadorEnVivo from './BuscadorEnVivo';
 import './TopNav.css';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import { FavoritosContext } from '../context/FavoritosContext';
+import { Link } from 'react-router-dom';
 
 function TopNav(){
     const {usuario} = useContext(AuthContext);
+    const {favoritos} = useContext(FavoritosContext);
 
     return(
         <header className='topnav'>
@@ -12,7 +15,15 @@ function TopNav(){
                 <BuscadorEnVivo />
             </div>
             <div className='perfil-usuario'>
-                <span className='notificaciones'>🔔</span>
+                <Link to='/mis-favoritos' style={{textDecoration: 'none',
+                    background: '#f1f5f9',
+                    padding: '8px 15px',
+                    borderRadius: '20px',
+                    color: '#0f172a',
+                    fontWeight: 'bold'
+                }}>
+                    Favoritos: <span style={{ color: '#ef4444'}}>{favoritos.length}</span>
+                </Link>
                 {usuario.conectado ? (
                     <>
                         <div className='avatar'>(usuario.nombre.charAT(0))</div>
