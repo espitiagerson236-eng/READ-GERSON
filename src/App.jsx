@@ -12,6 +12,8 @@ import Productos from './pages/Productos';
 import NotFound from './pages/NotFound';
 import Usuarios from './pages/Usuarios';
 import UsuarioDetalle from './pages/UsuariosDetalle';
+import InventarioMongo from './components/InventarioMongo';
+import NuevoProductoMongo from './components/NuevoProductoMongo';
 
 
 function App (){
